@@ -1,7 +1,6 @@
 const puppeteer = require('puppeteer');
 
 module.exports.screenshot = (link, filename) => {
-    try{console.log('screenshot called');
     const main = async () => {
         const browser = await puppeteer.launch()
         const page = await browser.newPage()
@@ -17,7 +16,5 @@ module.exports.screenshot = (link, filename) => {
     }
 
     main();
-    }catch(error){
-        console.log(error);
-    }
+
 }
